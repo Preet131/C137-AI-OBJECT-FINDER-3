@@ -45,8 +45,8 @@ function draw(){
             if(label == input){
                 video.stop()
                 document.getElementById("status").innerHTML = "object mentioned found"
-                speech = speechSynthesis()
-                utterThis = SpeechSynthesisUtterance("Object mentioned found")
+                speech = window.speechSynthesis;
+                utterThis = new SpeechSynthesisUtterance("Object mentioned found")
                 speech.speak(utterThis)
 
             }   
